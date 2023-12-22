@@ -1,11 +1,14 @@
 import streamlit as st
 import pickle
-import seaborn as sns
 import pandas as pd
+import seaborn as sns
 
 # Load the pre-trained model
 with open('iris_model_gnb.pkl', 'rb') as file:
     model = pickle.load(file)
+
+# Load the Iris dataset using Seaborn
+iris_df = sns.load_dataset('iris')
 
 # Streamlit app
 def main():

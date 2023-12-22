@@ -32,10 +32,7 @@ def main():
     st.subheader("Class labels and their corresponding index number")
    
     st.subheader("Prediction")
-    # Display the predicted class
-    species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
-    st.write(f"Predicted Iris Species: {species_mapping[prediction]}")
-    
+        
     st.subheader("Prediction Probability")
 
     # Predict the target class probabilities
@@ -53,5 +50,9 @@ def main():
     # Get the predicted class
     prediction = model.predict(input_data)[0]
 
+    # Display the predicted class
+    species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
+    st.write(f"Predicted Iris Species: {species_mapping[prediction]}")
+    
 if __name__ == "__main__":
     main()

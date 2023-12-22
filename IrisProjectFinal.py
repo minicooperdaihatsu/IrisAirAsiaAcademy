@@ -35,12 +35,16 @@ df = user_input_features()
     
     # Display the prediction
 
+prediction = iris_model_gnb.predict(df)
+#prediction_proba = iris_model_gnb.predict_proba(df)
 
+st.subheader('Class labels and their corresponding index number')
+st.write(Y.unique())
 st.subheader('Prediction')
 st.write(prediction)
 
-st.subheader('Prediction Probability')
-st.write(prediction_proba)    
+#st.subheader('Prediction Probability')
+#st.write(prediction_proba)    
 
 if __name__ == "__main__":
     main()

@@ -10,7 +10,7 @@ with open('iris_model_gnb.pkl', 'rb') as file:
 
 # Streamlit app
 def main():
-    st.title("# Simple Iris Flower Prediction App")
+    st.title("Simple Iris Flower Prediction App")
     st.write("This app predicts the **Iris flower** type!")
 
 st.sidebar.header('User Input Parameters')

@@ -11,10 +11,11 @@ def main():
     st.write("This app predicts the **Iris flower** type!")
     
     # Use st.sidebar for sliders in the sidebar
-    sepal_length = st.sidebar.slider("Sepal Length", 4.0, 8.0, 5.0)
-    sepal_width = st.sidebar.slider("Sepal Width", 2.0, 4.5, 3.0)
-    petal_length = st.sidebar.slider("Petal Length", 1.0, 7.0, 4.0)
-    petal_width = st.sidebar.slider("Petal Width", 0.1, 2.5, 1.0)
+    data = {'sepal_length': sepal_length,
+            'sepal_width': sepal_width,
+            'petal_length': petal_length,
+            'petal_width': petal_width}                 
+    features = pd.DataFrame(data, index=[0])
 
     # Display the selected values
     st.subheader("User Input Parameter")

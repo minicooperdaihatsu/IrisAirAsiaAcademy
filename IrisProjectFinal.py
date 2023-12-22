@@ -16,6 +16,13 @@ def main():
     petal_length = st.sidebar.slider("Petal Length", 1.0, 7.0, 4.0)
     petal_width = st.sidebar.slider("Petal Width", 0.1, 2.5, 1.0)
 
+    # Display the selected values
+    st.subheader("User Input Parameter")
+    st.write(f"Sepal Length: {sepal_length}")
+    st.write(f"Sepal Width: {sepal_width}")
+    st.write(f"Petal Length: {petal_length}")
+    st.write(f"Petal Width: {petal_width}")
+    
     # Predict the target class
     input_data = [[sepal_length, sepal_width, petal_length, petal_width]]
     prediction = model.predict(input_data)[0]

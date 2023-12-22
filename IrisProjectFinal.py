@@ -38,8 +38,7 @@ def main():
       # Create a DataFrame for the final prediction
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
     final_prediction_df = pd.DataFrame({
-        'Final Prediction': [species_mapping[prediction]],
-        'Probability': [max(prediction_proba)]
+        'Final Prediction': [species_mapping[prediction]]
     })
 
     st.subheader("Final Prediction:")

@@ -57,8 +57,8 @@ def main():
         'value': [species_mapping[prediction]]
     })
 
-    st.subheader("Prediction of Iris Species")
-    st.dataframe(final_prediction_df) 
+    st.subheader("Predicted Iris Species:")
+    st.dataframe(species_df, index=False)  # Do not display the index
     
     st.subheader("Prediction Probability")
     st.dataframe(probability_df)

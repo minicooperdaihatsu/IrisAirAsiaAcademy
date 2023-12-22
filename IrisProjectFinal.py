@@ -34,8 +34,7 @@ def user_input_features():
 df = user_input_features()
     
     # Display the prediction
-prediction = iris_model_gnb.predict(df)
-prediction_proba = iris_model_gnb.predict_proba(df)
+
 
 st.subheader('Class labels and their corresponding index number')
 st.write(Y.unique())

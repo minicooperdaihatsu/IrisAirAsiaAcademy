@@ -38,7 +38,7 @@ def main():
      # Display the final prediction
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
     predicted_species = species_mapping[prediction]
-    st.write(f"Final Prediction: {predicted_species} with Probability: {max(prediction_proba):.4f}")
+    st.write(f"Final Prediction: {predicted_species}")
 
     # Create separate DataFrames for 'Iris Species' and 'Probability'
     species_df = pd.DataFrame({

@@ -50,7 +50,7 @@ def main():
     })
 
     st.subheader("Iris Species")
-    st.dataframe(species_df.set_index('Iris Species'))  
+    st.dataframe(species_df)  
  
     # Create a DataFrame for the final prediction
     final_prediction_df = pd.DataFrame({

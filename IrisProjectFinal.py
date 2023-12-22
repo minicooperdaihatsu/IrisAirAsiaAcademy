@@ -29,34 +29,28 @@ def main():
     st.subheader("User Input parameters")
     st.dataframe(input_data)
    
-    
-
      # Predict the target class probabilities
     prediction_proba = model.predict_proba(input_data)[0]
 
-    # Get the predicted class
-    prediction = model.predict(input_data)[0]
-
-    # Create a DataFrame for the iris species prediction
-    st.subheader("Class labels and their corresponding index number") 
+    # Create separate DataFrames for 'Iris Species' and 'Probability'
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
     species_df = pd.DataFrame({
         'Iris Species': species_mapping.values()
     })
 
-    # Create a DataFrame for prediction probability
-    st.subheader("Prediction Probability")
     probability_df = pd.DataFrame({
         'Probability': prediction_proba
     })
-    
+
     st.subheader("Predicted Iris Species:")
-    st.dataframe(prediction_df)
+    st.dataframe(species_df)
+
+    st.subheader("Prediction Probabilities:")
+    st.dataframe(probability_df)
 
     # Display the final prediction
-    st.subheader("Prediction")
-    species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
-    st.dataframe({species_mapping[prediction]}) 
+    predicted_species = species_mapping[model.predict(input_data)[0]]
+    st.write(f"Final Prediction: {predicted_species} with Probability: {max(prediction_proba):.4f}")
 
 if __name__ == "__main__":
     main()

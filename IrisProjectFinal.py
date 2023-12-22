@@ -30,11 +30,14 @@ def main():
     # Predict the target class probabilities
     prediction_proba = model.predict_proba(input_data)[0]
 
-    # Display the prediction as an array
+    # Create a DataFrame for the prediction probabilities
+    prediction_df = pd.DataFrame({
+        'Class': ['Setosa', 'Versicolor', 'Virginica'],
+        'Probability': prediction_proba
+    })
+
     st.subheader("Predicted Probabilities:")
-    st.write(f"Setosa: {prediction_proba[0]:.4f}")
-    st.write(f"Versicolor: {prediction_proba[1]:.4f}")
-    st.write(f"Virginica: {prediction_proba[2]:.4f}")
+    st.dataframe(prediction_df)
 
     # Get the predicted class
     prediction = model.predict(input_data)[0]

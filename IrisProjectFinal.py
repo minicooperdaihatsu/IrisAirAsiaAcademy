@@ -1,5 +1,8 @@
 import streamlit as st
+import pandas as pd
+import seaborn as sns
 import pickle
+from sklearn.naive_bayes import GaussianNB
 
 # Load the pre-trained model
 with open('iris_model_gnb.pkl', 'rb') as file:

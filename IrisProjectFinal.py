@@ -30,6 +30,9 @@ def user_input_features():
     features = pd.Dataframe(data, index=[0])
     return features
     
+    # Call user defined function
+df = user_input_features() 
+    
     # Display the prediction
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
     st.write(f"Predicted Iris Species: {species_mapping[prediction]}")

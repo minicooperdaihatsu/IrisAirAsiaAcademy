@@ -49,10 +49,10 @@ def main():
         'Probability': prediction_proba
     })
 
-    st.subheader("Predicted Iris Species:")
+    st.subheader("Iris Species")
     st.dataframe(species_df)  
 
-    st.subheader("Prediction Probabilities:")
+    st.subheader("Prediction Probability")
     st.dataframe(probability_df)
 
     # Create a DataFrame for the final prediction
@@ -60,7 +60,7 @@ def main():
         'Final Prediction': [species_mapping[prediction]]
     })
 
-    st.subheader("Final Prediction:")
+    st.subheader("Prediction of Iris Species")
     st.dataframe(final_prediction_df)  
 
 if __name__ == "__main__":

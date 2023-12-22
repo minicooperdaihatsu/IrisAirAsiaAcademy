@@ -35,11 +35,15 @@ def main():
     # Get the predicted class
     prediction = model.predict(input_data)[0]
 
-     # Display the final prediction
+    # Create a DataFrame for the final prediction
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
     final_prediction_df = pd.DataFrame({
-        'Final Prediction': [species_mapping[prediction]]
+        'Final Prediction': [species_mapping[prediction]],
+        'Probability': [max(prediction_proba)]
     })
+
+    st.subheader("Final Prediction:")
+    st.dataframe(final_prediction_df, index=False)  # Hide the index
 
     # Create separate DataFrames for 'Iris Species' and 'Probability'
     species_df = pd.DataFrame({
@@ -51,10 +55,10 @@ def main():
     })
 
     st.subheader("Predicted Iris Species:")
-    st.dataframe(species_df)
+    st.dataframe(species_df, index=False)  # Hide the index
 
     st.subheader("Prediction Probabilities:")
-    st.write(probability_df)
+    st.dataframe(probability_df)
 
 if __name__ == "__main__":
     main()

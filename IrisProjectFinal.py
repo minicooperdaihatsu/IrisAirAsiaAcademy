@@ -29,10 +29,13 @@ def main():
     st.subheader("User Input parameters")
     st.dataframe(input_data)
    
-     # Predict the target class probabilities
+    # Predict the target class probabilities
     prediction_proba = model.predict_proba(input_data)[0]
 
- # Display the final prediction
+    # Get the predicted class
+    prediction = model.predict(input_data)[0]
+
+     # Display the final prediction
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
     predicted_species = species_mapping[prediction]
     st.write(f"Final Prediction: {predicted_species} with Probability: {max(prediction_proba):.4f}")

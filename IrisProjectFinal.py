@@ -51,7 +51,6 @@ def main():
 
     st.subheader("Iris Species")
     st.dataframe(species_df)  
-    st.write(Y.species_df())
 
     st.subheader("Prediction Probability")
     st.dataframe(probability_df)

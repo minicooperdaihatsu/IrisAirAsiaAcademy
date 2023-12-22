@@ -42,9 +42,13 @@ def main():
     # Create a DataFrame for the prediction result
     prediction_df = pd.DataFrame({
         'Iris Species': ['Setosa', 'Versicolor', 'Virginica'],
-        'Probability': prediction_proba
     })
 
+    # Create a DataFrame for the prediction result
+    prediction_df = pd.DataFrame({
+        'Probability': prediction_proba
+    })
+    
     st.subheader("Predicted Iris Species:")
     st.dataframe(prediction_df)
 

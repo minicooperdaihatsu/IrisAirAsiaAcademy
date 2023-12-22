@@ -27,10 +27,19 @@ def main():
     st.subheader("Selected Input Values:")
     st.dataframe(input_data)
 
-    # Predict the target class
+    # Predict the target class probabilities
+    prediction_proba = model.predict_proba(input_data)[0]
+
+    # Display the prediction as an array
+    st.subheader("Predicted Probabilities:")
+    st.write(f"Setosa: {prediction_proba[0]:.4f}")
+    st.write(f"Versicolor: {prediction_proba[1]:.4f}")
+    st.write(f"Virginica: {prediction_proba[2]:.4f}")
+
+    # Get the predicted class
     prediction = model.predict(input_data)[0]
 
-    # Display the prediction
+    # Display the predicted class
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
     st.write(f"Predicted Iris Species: {species_mapping[prediction]}")
 

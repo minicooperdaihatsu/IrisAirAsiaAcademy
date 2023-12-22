@@ -51,17 +51,19 @@ def main():
 
     st.subheader("Iris Species")
     st.dataframe(species_df)  
-
-    st.subheader("Prediction Probability")
-    st.dataframe(probability_df)
-
+ 
     # Create a DataFrame for the final prediction
     final_prediction_df = pd.DataFrame({
         'value': [species_mapping[prediction]]
     })
 
     st.subheader("Prediction of Iris Species")
-    st.dataframe(final_prediction_df)  
+    st.dataframe(final_prediction_df) 
+    
+    st.subheader("Prediction Probability")
+    st.dataframe(probability_df)
+
+    
 
 if __name__ == "__main__":
     main()

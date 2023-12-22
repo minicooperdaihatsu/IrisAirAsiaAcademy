@@ -49,8 +49,9 @@ def main():
     st.dataframe(probability_df)
 
     # Display the final prediction
-    predicted_species = species_mapping[model.predict(input_data)[0]]
-    st.write(f"Final Prediction: {predicted_species} with Probability: {max(prediction_proba):.4f}")
-
+    st.subheader("Prediction")
+    species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
+    st.dataframe({species_mapping[prediction]})
+     
 if __name__ == "__main__":
     main()

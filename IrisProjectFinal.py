@@ -1,5 +1,6 @@
 import streamlit as st
 import pickle
+import seaborn as sns
 import pandas as pd
 
 # Load the pre-trained model
@@ -28,7 +29,9 @@ def main():
 
     st.subheader("User Input parameters")
     st.dataframe(input_data)
-   
+    
+    data = sns.load_dataset('iris')
+    
     # Predict the target class probabilities
     prediction_proba = model.predict_proba(df)
 

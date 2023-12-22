@@ -43,7 +43,7 @@ def main():
     })
 
     st.subheader("Predicted Iris Species:")
-    st.dataframe(species_df, index=False)  # Hide the index
+    st.dataframe(species_df)
 
     st.subheader("Prediction Probabilities:")
     st.dataframe(probability_df)

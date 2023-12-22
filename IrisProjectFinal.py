@@ -50,7 +50,7 @@ def main():
     })
 
     st.subheader("Iris Species")
-    st.table(species_df.T)
+    st.table(species_df.set_index('Iris Species'))
     # Create a DataFrame for the final prediction
     final_prediction_df = pd.DataFrame({
         'value': [species_mapping[prediction]]

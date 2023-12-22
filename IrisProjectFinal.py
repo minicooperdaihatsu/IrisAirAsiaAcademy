@@ -34,10 +34,10 @@ def main():
     st.dataframe(input_data)
       
     # Predict the target class probabilities
-    prediction_proba = model.predict_proba[0]
+    prediction_proba = model.predict_proba(input_data)[0]
 
     # Get the predicted class
-    prediction = model.predict[0]
+    prediction = model.predict(input_data)[0]
 
     # Create separate DataFrames for 'Iris Species'
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}

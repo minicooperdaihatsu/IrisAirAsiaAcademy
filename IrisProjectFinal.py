@@ -27,7 +27,7 @@ def user_input_features():
             'sepal_width': sepal_width,
             'petal_length': petal_length,
             'petal_width': petal_width}   
-    features = model.predict(data, index=[0])
+    features = pd.Dataframe(data, index=[0])
     return features
     
     # Display the prediction

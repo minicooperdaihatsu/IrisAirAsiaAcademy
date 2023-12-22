@@ -61,9 +61,7 @@ def main():
     st.dataframe(final_prediction_df) 
     
     st.subheader("Prediction Probability")
-    st.dataframe(probability_df)
-
-    
+    st.table(probability_df.T)  # Transpose the DataFrame for horizontal display
 
 if __name__ == "__main__":
     main()

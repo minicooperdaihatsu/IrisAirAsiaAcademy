@@ -38,7 +38,8 @@ def main():
      # Display the final prediction
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
     final_prediction_df = pd.DataFrame({
-        'Final Prediction': [species_mapping[prediction]],
+        'Final Prediction': [species_mapping[prediction]]
+    })
 
     # Create separate DataFrames for 'Iris Species' and 'Probability'
     species_df = pd.DataFrame({

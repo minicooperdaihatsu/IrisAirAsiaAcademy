@@ -24,8 +24,8 @@ def user_input_features():
 
     # Predict the target class
     data = [[sepal_length, sepal_width, petal_length, petal_width]]
-    prediction = model.predict(data, index=[0]
-    return prediction
+    features = model.predict(data, index=[0]
+    return features
     
     # Display the prediction
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}

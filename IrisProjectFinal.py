@@ -61,7 +61,7 @@ def main():
     st.dataframe(final_prediction_df) 
     
     st.subheader("Prediction Probability")
-    st.dataframe(probability_df))
+    st.dataframe(probability_df)
 
     
 

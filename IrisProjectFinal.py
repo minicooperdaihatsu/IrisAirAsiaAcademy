@@ -8,7 +8,8 @@ with open('iris_model_gnb.pkl', 'rb') as file:
 # Streamlit app
 def main():
     st.title("Simple Iris Flower Prediction App")
-
+    st.title("This app predicts the **Iris flower** type!")
+    
     # Use st.sidebar for sliders in the sidebar
     sepal_length = st.sidebar.slider("Sepal Length", 4.0, 8.0, 5.0)
     sepal_width = st.sidebar.slider("Sepal Width", 2.0, 4.5, 3.0)

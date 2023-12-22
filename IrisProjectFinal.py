@@ -61,7 +61,7 @@ def main():
     })
 
     st.subheader("Prediction of Iris Species")
-    st.write(final_prediction_df)  
+    st.write(prediction)  
 
 if __name__ == "__main__":
     main()

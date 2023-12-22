@@ -54,7 +54,7 @@ def main():
     st.dataframe(species_df)
 
     st.subheader("Prediction Probabilities:")
-    st.write(probability_df)
+    st.write(probability)
 
 if __name__ == "__main__":
     main()

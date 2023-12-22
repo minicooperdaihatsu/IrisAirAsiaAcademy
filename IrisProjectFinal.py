@@ -32,14 +32,12 @@ def main():
 
     st.subheader("User Input parameters")
     st.dataframe(input_data)
-    
-    data = sns.load_dataset('iris')
-    
+      
     # Predict the target class probabilities
-    prediction_proba = model.predict_proba(df)
+    prediction_proba = model.predict_proba[0]
 
     # Get the predicted class
-    prediction = model.predict(df)
+    prediction = model.predict[0]
 
     # Create separate DataFrames for 'Iris Species'
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}

@@ -46,6 +46,7 @@ def main():
     })
 
     probability_df = pd.DataFrame({
+        'Probability': prediction_proba
     })
 
     st.subheader("Iris Species")

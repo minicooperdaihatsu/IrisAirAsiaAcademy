@@ -54,6 +54,7 @@ def main():
 
     st.subheader("Prediction Probability")
     st.dataframe(probability_df)
+    st.write(prediction_proba)
 
     # Create a DataFrame for the final prediction
     final_prediction_df = pd.DataFrame({

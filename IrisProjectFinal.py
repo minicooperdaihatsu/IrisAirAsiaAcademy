@@ -34,7 +34,7 @@ def user_input_features():
 df = user_input_features()
     
     # Display the prediction
-
+iris_model_gnb = GaussianNB()
 prediction = iris_model_gnb.predict(df)
 #prediction_proba = iris_model_gnb.predict_proba(df)
 

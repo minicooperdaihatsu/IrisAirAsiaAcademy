@@ -29,13 +29,7 @@ def main():
     st.subheader("User Input parameters")
     st.dataframe(input_data)
    
-    st.subheader("Class labels and their corresponding index number")
-
-    # Display the final prediction
-    st.subheader("Prediction")
-    species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
-    st.dataframe({species_mapping[prediction]})     
-    
+    st.subheader("Class labels and their corresponding index number") 
     
     st.subheader("Prediction Probability")
 
@@ -54,7 +48,10 @@ def main():
     st.subheader("Predicted Iris Species:")
     st.dataframe(prediction_df)
 
-
+    # Display the final prediction
+    st.subheader("Prediction")
+    species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
+    st.dataframe({species_mapping[prediction]}) 
 
 if __name__ == "__main__":
     main()

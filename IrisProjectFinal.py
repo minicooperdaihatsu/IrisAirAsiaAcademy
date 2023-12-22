@@ -23,7 +23,10 @@ def user_input_features():
     petal_width = st.sidebar.slider("Petal Width", 0.1, 2.5, 0.2)
 
     # Predict the target class
-    data = [[sepal_length, sepal_width, petal_length, petal_width]]
+   data = {'sepal_length': sepal_length,
+            'sepal_width': sepal_width,
+            'petal_length': petal_length,
+            'petal_width': petal_width}  
     features = model.predict(data, index=[0])
     return features
     

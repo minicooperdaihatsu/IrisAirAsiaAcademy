@@ -8,13 +8,15 @@ with open('iris_model_gnb.pkl', 'rb') as file:
 
 # Streamlit app
 def main():
-    st.title("Iris Flower Prediction App (Gaussian Naive Bayes)")
-
+    st.title("Simple Iris Flower Prediction App")
+    st.write("This app predicts the **Iris flower** type!")
+    st.sidebar.header('User Input Parameters')
+    
     # Use st.sidebar for sliders in the sidebar
-    sepal_length = st.sidebar.slider("Sepal Length", 4.0, 8.0, 5.0)
-    sepal_width = st.sidebar.slider("Sepal Width", 2.0, 4.5, 3.0)
-    petal_length = st.sidebar.slider("Petal Length", 1.0, 7.0, 4.0)
-    petal_width = st.sidebar.slider("Petal Width", 0.1, 2.5, 1.0)
+    sepal_length = st.sidebar.slider("Sepal Length", 4.3, 7.9, 5.4)
+    sepal_width = st.sidebar.slider("Sepal Width", 2.0, 4.4, 3.4)
+    petal_length = st.sidebar.slider("Petal Length", 1.0, 6.9, 1.3)
+    petal_width = st.sidebar.slider("Petal Width", 0.1, 2.5, 0.2)
 
     # Display the selected values as a DataFrame
     input_data = pd.DataFrame({
@@ -24,7 +26,7 @@ def main():
         'Petal Width': [petal_width]
     })
 
-    st.subheader("Selected Input Values:")
+    st.subheader("User Input parameters")
     st.dataframe(input_data)
 
     # Predict the target class probabilities

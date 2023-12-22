@@ -57,7 +57,7 @@ def main():
 
     # Create a DataFrame for the final prediction
     final_prediction_df = pd.DataFrame({
-        'Final Prediction': [species_mapping[prediction]]
+        'value': [species_mapping[prediction]]
     })
 
     st.subheader("Prediction of Iris Species")

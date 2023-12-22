@@ -57,7 +57,7 @@ def main():
     })
 
     st.subheader("Predicted Iris Species")
-    st.dataframe(final_prediction_df) 
+    st.table(final_prediction_df.T) 
     
     st.subheader("Prediction Probability")
     # Transpose the DataFrame for horizontal display

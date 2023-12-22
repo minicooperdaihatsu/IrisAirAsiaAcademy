@@ -39,7 +39,7 @@ def main():
     # Get the predicted class
     prediction = model.predict(input_data)[0]
 
-    # Create separate DataFrames for 'Iris Species'
+    # Create DataFrames for 'Iris Species'
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
     species_df = pd.DataFrame({
         'Iris Species': species_mapping.values()

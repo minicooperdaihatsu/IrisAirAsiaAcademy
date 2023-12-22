@@ -30,10 +30,10 @@ def main():
     st.dataframe(input_data)
    
     # Predict the target class probabilities
-    prediction_proba = model.predict_proba(input_data)[0]
+    prediction_proba = model.predict_proba(df)
 
     # Get the predicted class
-    prediction = model.predict(input_data)[0]
+    prediction = model.predict(df)
 
     # Create separate DataFrames for 'Iris Species'
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
@@ -41,13 +41,12 @@ def main():
         'Iris Species': species_mapping.values()
     })
 
-
     probability_df = pd.DataFrame({
         'Probability': prediction_proba
     })
 
     st.subheader("Predicted Iris Species:")
-    st.dataframe(species_df)  # Display the index
+    st.dataframe(species_df)  
 
     st.subheader("Prediction Probabilities:")
     st.dataframe(probability_df)
@@ -58,7 +57,7 @@ def main():
     })
 
     st.subheader("Final Prediction:")
-    st.dataframe(final_prediction_df)  # Display the index
+    st.dataframe(final_prediction_df)  
 
 if __name__ == "__main__":
     main()

@@ -7,7 +7,7 @@ with open('iris_model_gnb.pkl', 'rb') as file:
 
 # Streamlit app
 def main():
-    st.title("Iris Flower Prediction App (Gaussian Naive Bayes)")
+    st.title("Simple Iris Flower Prediction App")
 
     # Use st.sidebar for sliders in the sidebar
     sepal_length = st.sidebar.slider("Sepal Length", 4.0, 8.0, 5.0)

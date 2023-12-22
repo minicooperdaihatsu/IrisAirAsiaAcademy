@@ -6,7 +6,7 @@ with open('iris_model_gnb.pkl', 'rb') as file:
     model = pickle.load(file)
 
 # Streamlit app
-def main():
+def user_input_features():
     st.title("Simple Iris Flower Prediction App")
     st.write("This app predicts the **Iris flower** type!")
     
@@ -24,6 +24,7 @@ def main():
             'petal_length': petal_length,
             'petal_width': petal_width}                 
     features = pd.DataFrame(data, index=[0])
+    return features
     
     # Predict the target class
     input_data = [[sepal_length, sepal_width, petal_length, petal_width]]
@@ -32,6 +33,3 @@ def main():
     # Display the prediction
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
     st.write(f"Predicted Iris Species: {species_mapping[prediction]}")
-
-if __name__ == "__main__":
-    main()

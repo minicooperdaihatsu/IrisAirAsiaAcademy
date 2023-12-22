@@ -50,18 +50,18 @@ def main():
     })
 
     st.subheader("Iris Species")
-    st.dataframe(species_df)  
+    st.dataframe(species_df.style.hide_index())  
  
     # Create a DataFrame for the final prediction
     final_prediction_df = pd.DataFrame({
         'value': [species_mapping[prediction]]
     })
 
-    st.subheader("Predicted Iris Species:")
+    st.subheader("Predicted Iris Species")
     st.dataframe(species_df.style.hide_index())  # Hide the index
     
     st.subheader("Prediction Probability")
-    st.dataframe(probability_df)
+    st.dataframe(probability_df.style.hide_index())
 
     
 

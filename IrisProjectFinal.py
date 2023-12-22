@@ -14,6 +14,7 @@ def main():
     st.write("This app predicts the **Iris flower** type!")
 
 st.sidebar.header('User Input Parameters')
+
     # Feature sliders for input values
 def user_input_features():
     sepal_length = st.sidebar.slider("Sepal Length", 4.3, 7.9, 5.4)
@@ -22,8 +23,8 @@ def user_input_features():
     petal_width = st.sidebar.slider("Petal Width", 0.1, 2.5, 0.2)
 
     # Predict the target class
-    input_data = [[sepal_length, sepal_width, petal_length, petal_width]]
-    prediction = model.predict(input_data)[0]
+    data = [[sepal_length, sepal_width, petal_length, petal_width]]
+    prediction = model.predict(data, index=[0]
     return prediction
     
     # Display the prediction

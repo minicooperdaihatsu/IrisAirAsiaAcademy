@@ -29,6 +29,9 @@ def main():
     st.subheader("User Input parameters")
     st.dataframe(input_data)
     st.subheader("Class labels and their corresponding index number")
+    st.subheader("Prediction")
+    st.subheader("Prediction Probability")
+
     # Predict the target class probabilities
     prediction_proba = model.predict_proba(input_data)[0]
 

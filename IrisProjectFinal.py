@@ -29,9 +29,7 @@ def main():
     st.subheader("User Input parameters")
     st.dataframe(input_data)
    
-    st.subheader("Class labels and their corresponding index number") 
     
-    st.subheader("Prediction Probability")
 
      # Predict the target class probabilities
     prediction_proba = model.predict_proba(input_data)[0]
@@ -39,13 +37,16 @@ def main():
     # Get the predicted class
     prediction = model.predict(input_data)[0]
 
-    # Create a DataFrame for the prediction result
-    prediction_df = pd.DataFrame({
-        'Iris Species': ['Setosa', 'Versicolor', 'Virginica'],
+    # Create a DataFrame for the iris species prediction
+    st.subheader("Class labels and their corresponding index number") 
+    species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
+    species_df = pd.DataFrame({
+        'Iris Species': species_mapping.values()
     })
 
-    # Create a DataFrame for the prediction result
-    prediction_df = pd.DataFrame({
+    # Create a DataFrame for prediction probability
+    st.subheader("Prediction Probability")
+    probability_df = pd.DataFrame({
         'Probability': prediction_proba
     })
     

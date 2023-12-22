@@ -52,7 +52,7 @@ def main():
 
     # Display the final prediction
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
-    st.write(f"Final Prediction: {species_mapping[prediction]}")
+    st.dataframe(f"Final Prediction: {species_mapping[prediction]}")
 
 if __name__ == "__main__":
     main()

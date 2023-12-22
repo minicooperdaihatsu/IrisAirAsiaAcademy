@@ -34,5 +34,5 @@ def user_input_features():
     species_mapping = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
     st.write(f"Predicted Iris Species: {species_mapping[prediction]}")
 
-if __name__ == "__main__":
+if __name__ == "__user_input_features__":
     user_input_features()

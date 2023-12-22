@@ -43,7 +43,7 @@ def main():
     })
 
     st.subheader("Final Prediction:")
-    st.dataframe(final_prediction_df, index=False)  # Hide the index
+    st.dataframe(final_prediction_df)  # Display the index
 
     # Create separate DataFrames for 'Iris Species' and 'Probability'
     species_df = pd.DataFrame({
